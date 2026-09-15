@@ -1,0 +1,11 @@
+mainfest.json
+{
+  "name": "CareConnect - Nest Care Home",
+  "short_name": "CareConnect",
+  "start_url": "/dashboard",
+  "display": "standalone",
+  "background_color": "#f4f7fb",
+  "theme_color": "#2563eb",
+  "description": "Smart Care Management for Nest Care Home",
+  "icons": []
+}
