@@ -1,4 +1,5 @@
 
+
 from flask import Flask, request, redirect
 import sqlite3
 from datetime import datetime
@@ -1559,11 +1560,17 @@ def emergency():
 
 
 # =========================================================
+# DATABASE INITIALIZATION
+# =========================================================
+
+# Create all database tables when the app starts.
+# Gunicorn imports app.py, so this must run outside __main__.
+create_database()
+
+
+# =========================================================
 # RUN APPLICATION
 # =========================================================
 
 if __name__ == "__main__":
-
-    create_database()
-
     app.run(debug=True)
