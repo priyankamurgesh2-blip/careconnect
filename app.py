@@ -8,8 +8,8 @@ from datetime import datetime
 app = Flask(__name__)
 DATABASE = os.path.join(os.path.dirname(os.path.abspath(__file__)), "careconnect.db")
 app.secret_key = os.environ.get("SECRET_KEY", "careconnect-secret-change-this")
-ADMIN_USERNAME = os.environ.get("CARECONNECT_USERNAME", "priyankamurgesh2")
-ADMIN_PASSWORD = os.environ.get("CARECONNECT_PASSWORD", "CHANGE_ME")
+ADMIN_USERNAME = os.environ.get("CARECONNECT_USERNAME", "priya160206")
+ADMIN_PASSWORD = os.environ.get("CARECONNECT_PASSWORD", "priyanka@nectcarehome")
 
 
 @app.route("/style.css")
