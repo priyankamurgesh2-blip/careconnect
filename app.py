@@ -1,4 +1,5 @@
 
+
 from flask import Flask, request, redirect, send_from_directory, session
 from functools import wraps
 import os
@@ -162,7 +163,7 @@ def page(title, body, public=False):
     if session.get("staff_logged_in"):
         nav = '<nav class="topnav"><a href="/dashboard">Dashboard</a><a href="/logout">Logout</a></nav>'
     elif public:
-        nav = '<nav class="topnav"><a href="/">Home</a><a href="/login">Staff Login</a></nav>'
+        nav = '<nav class="topnav public-nav"><div class="brand"><span class="brand-mark">🏠</span><span>NEST CARE HOME</span></div><div class="nav-links"><a href="/#about">About Us</a><a href="/#services">Services</a><a href="/#facilities">Facilities</a><a href="/#gallery">Gallery</a><a href="/#contact">Contact Us</a><a class="nav-login" href="/login">🔐 Staff Login</a></div></nav>'
     return f"""
     <!DOCTYPE html><html><head>
     <meta charset="UTF-8"><meta name="viewport" content="width=device-width, initial-scale=1.0">
@@ -178,21 +179,70 @@ def page(title, body, public=False):
 @app.route("/")
 def home():
     return page("Nest Care Home", """
-    <div class="public-hero">
-      <div class="hero-card">
-        <div class="hero-icon">🏠</div><p class="eyebrow">NEST CARE HOME</p>
-        <h1>Compassionate Care.<br>Connected Management.</h1>
-        <p class="hero-text">Welcome to Nest Care Home. CareConnect helps staff manage residents, health, medicines, meals, visitors, appointments and daily care in one place.</p>
-        <div class="hero-buttons"><a href="/login"><button>🔐 Staff Login</button></a></div>
-      </div>
-      <div class="feature-grid">
-        <div class="feature-card"><span>❤️</span><h3>Resident Care</h3><p>Organised resident and health information.</p></div>
-        <div class="feature-card"><span>💊</span><h3>Medicine Management</h3><p>Track medicines and their status.</p></div>
-        <div class="feature-card"><span>🍲</span><h3>Daily Care</h3><p>Record meals, water and activities.</p></div>
-        <div class="feature-card"><span>🚨</span><h3>Emergency</h3><p>Quickly record emergency information.</p></div>
-      </div>
-      <div class="public-info"><h2>About Nest Care Home</h2><p>CareConnect is a digital care-management system for organising important staff records.</p><h2>Contact & Location</h2><p>Nest Care Home<br>Gowri Shankar Nagar, Vijayawada, Andhra Pradesh</p></div>
-    </div>""", public=True)
+    <main class="public-home">
+      <section class="public-hero">
+        <div class="hero-content">
+          <span class="eyebrow">NEST CARE HOME • VIJAYAWADA</span>
+          <h1>A Caring Home.<br><span>A Loving Family.</span></h1>
+          <p class="hero-text">A warm and supportive place where residents can feel safe, respected and cared for every day.</p>
+          <div class="hero-buttons">
+            <a href="#contact"><button>📞 Contact Us</button></a>
+            <a href="#about"><button class="light-button">Learn More</button></a>
+          </div>
+          <div class="hero-points"><span>❤️ Compassionate Care</span><span>🩺 Health Support</span><span>🏡 Comfortable Living</span></div>
+        </div>
+        <div class="hero-visual"><div class="hero-house">🏡</div><div class="hero-badge">Care • Comfort • Dignity</div></div>
+      </section>
+
+      <section id="about" class="public-section intro-section">
+        <div class="section-heading"><span class="section-kicker">ABOUT US</span><h2>More Than a Residence — A Caring Community</h2></div>
+        <p>Nest Care Home is focused on creating a comfortable and caring environment for residents. Our goal is to support everyday wellbeing while treating every resident with dignity, patience and respect.</p>
+      </section>
+
+      <section id="services" class="public-section">
+        <div class="section-heading"><span class="section-kicker">OUR SERVICES</span><h2>Care Designed Around Everyday Needs</h2></div>
+        <div class="card-grid public-cards">
+          <div class="card"><div class="card-icon">❤️</div><h3>Personal Care</h3><p>Support with everyday routines in a caring environment.</p></div>
+          <div class="card"><div class="card-icon">🩺</div><h3>Health Support</h3><p>Organised health information and care coordination.</p></div>
+          <div class="card"><div class="card-icon">💊</div><h3>Medicine Support</h3><p>Care staff can manage medicine records and schedules.</p></div>
+          <div class="card"><div class="card-icon">🍲</div><h3>Meals & Nutrition</h3><p>Daily meals, hydration and care records can be organised.</p></div>
+        </div>
+      </section>
+
+      <section id="facilities" class="public-section facilities-section">
+        <div class="section-heading"><span class="section-kicker">FACILITIES</span><h2>A Comfortable Place to Call Home</h2></div>
+        <div class="facility-grid">
+          <div class="facility-item"><span>🛏️</span><div><h3>Comfortable Living</h3><p>A home-like environment designed around resident comfort.</p></div></div>
+          <div class="facility-item"><span>🌿</span><div><h3>Peaceful Environment</h3><p>A calm setting for rest and everyday activities.</p></div></div>
+          <div class="facility-item"><span>🍽️</span><div><h3>Dining & Hydration</h3><p>Daily meal and water routines can be monitored.</p></div></div>
+          <div class="facility-item"><span>🚨</span><div><h3>Emergency Support</h3><p>Important emergency information is available to staff.</p></div></div>
+        </div>
+      </section>
+
+      <section id="gallery" class="public-section">
+        <div class="section-heading"><span class="section-kicker">GALLERY</span><h2>A Glimpse Into Nest Care Home</h2></div>
+        <p class="gallery-note">Real Nest Care Home photos can be added here. These spaces are reserved for your genuine facility, room, activity and team photos.</p>
+        <div class="gallery-grid">
+          <div class="gallery-placeholder">🏠<span>Our Home</span></div>
+          <div class="gallery-placeholder">🛏️<span>Rooms</span></div>
+          <div class="gallery-placeholder">🍲<span>Dining</span></div>
+          <div class="gallery-placeholder">❤️<span>Activities</span></div>
+        </div>
+      </section>
+
+      <section class="public-section care-banner">
+        <div><span class="section-kicker">CARECONNECT</span><h2>Smart management behind compassionate care.</h2><p>Our private CareConnect system helps authorised staff organise resident, health, medicine, meal, visitor and daily-care records.</p></div>
+        <a href="/login"><button>🔐 Staff Login</button></a>
+      </section>
+
+      <section id="contact" class="public-section contact-section">
+        <div class="contact-main"><span class="section-kicker">CONTACT US</span><h2>Let’s Connect</h2><p>For enquiries about Nest Care Home, please use the official contact details of the home.</p><div class="contact-cards"><div><span>📍</span><strong>Location</strong><p>Gowri Shankar Nagar, Vijayawada, Andhra Pradesh</p></div><div><span>🕐</span><strong>Care Support</strong><p>Contact the home directly for current timings and availability.</p></div></div></div>
+        <div class="map-card"><div class="map-icon">📍</div><h3>Nest Care Home</h3><p>Gowri Shankar Nagar<br>Vijayawada, Andhra Pradesh</p></div>
+      </section>
+
+      <footer class="public-footer"><strong>🏠 NEST CARE HOME</strong><span>Care • Comfort • Dignity</span><a href="/login">Staff Login</a></footer>
+    </main>
+    """, public=True)
 
 
 @app.route("/login", methods=["GET", "POST"])
