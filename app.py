@@ -1,10 +1,12 @@
 
 
+
 from flask import Flask, request, redirect, send_from_directory, session
 from functools import wraps
 import os
 import sqlite3
 from datetime import datetime
+from urllib.parse import quote
 
 app = Flask(__name__)
 DATABASE = os.path.join(os.path.dirname(os.path.abspath(__file__)), "careconnect.db")
@@ -178,7 +180,18 @@ def page(title, body, public=False):
 
 @app.route("/")
 def home():
-    return page("Nest Care Home", """
+    gallery_dir = os.path.join(os.path.dirname(os.path.abspath(__file__)), "static", "gallery")
+    allowed_images = (".png", ".jpg", ".jpeg", ".webp", ".gif")
+    gallery_files = sorted(
+        [name for name in os.listdir(gallery_dir) if name.lower().endswith(allowed_images)]
+    ) if os.path.isdir(gallery_dir) else []
+
+    gallery_cards = "".join(
+        f'<div class="gallery-photo-card"><img src="/static/gallery/{quote(name)}" alt="Nest Care Home"><div><strong>Nest Care Home</strong><span>Care • Comfort • Dignity</span></div></div>'
+        for name in gallery_files
+    )
+
+    return page("Nest Care Home", f"""
     <main class="public-home">
       <section class="public-hero">
         <div class="hero-content">
@@ -223,10 +236,7 @@ def home():
         <div class="section-heading"><span class="section-kicker">GALLERY</span><h2>A Glimpse Into Nest Care Home</h2></div>
         <p class="gallery-note">A glimpse of Nest Care Home.</p>
         <div class="gallery-grid">
-          <div class="gallery-photo-card">
-            <img src="/static/gallery/ChatGPT Image Sep 24, 2026, 10_31_10 PM.png" alt="Nest Care Home">
-            <div><strong>Nest Care Home</strong><span>Care • Comfort • Dignity</span></div>
-          </div>
+          {gallery_cards}
         </div>
       </section>
 
