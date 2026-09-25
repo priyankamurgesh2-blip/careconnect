@@ -1,6 +1,5 @@
 
 
-
 from flask import Flask, request, redirect, send_from_directory, session
 from functools import wraps
 import os
@@ -172,69 +171,6 @@ def page(title, body, public=False):
     <meta name="description" content="CareConnect - Smart Care Management for Nest Care Home">
     <title>{e(title)} - CareConnect</title>
     <link rel="stylesheet" href="/style.css"><link rel="manifest" href="/manifest.json">
-<style>
-.gallery-showcase{
-  display:grid;
-  grid-template-columns:2fr 1fr;
-  grid-template-rows:260px 260px;
-  gap:18px;
-  margin-top:28px;
-}
-.gallery-card{
-  position:relative;
-  display:block;
-  overflow:hidden;
-  border-radius:22px;
-  min-height:0;
-  text-decoration:none;
-  background:#eaf1f8;
-  box-shadow:0 12px 30px rgba(15,23,42,.10);
-}
-.gallery-main{grid-row:1 / 3;}
-.gallery-card img{
-  width:100%;
-  height:100%;
-  object-fit:cover;
-  display:block;
-  transition:transform .45s ease, filter .45s ease;
-}
-.gallery-card:hover img{
-  transform:scale(1.05);
-  filter:brightness(.88);
-}
-.gallery-caption{
-  position:absolute;
-  left:0;
-  right:0;
-  bottom:0;
-  padding:28px 20px 18px;
-  color:#fff;
-  background:linear-gradient(transparent,rgba(0,0,0,.72));
-}
-.gallery-caption strong{
-  display:block;
-  font-size:20px;
-  margin-bottom:4px;
-}
-.gallery-caption span{
-  font-size:13px;
-  opacity:.92;
-}
-.gallery-more{
-  text-align:center;
-  margin-top:22px;
-  color:#64748b;
-}
-@media(max-width:700px){
-  .gallery-showcase{
-    grid-template-columns:1fr;
-    grid-template-rows:280px 220px 220px;
-  }
-  .gallery-main{grid-row:auto;}
-  .gallery-caption strong{font-size:18px;}
-}
-</style>
-
     </head><body>{nav}{body}
     <script>if ("serviceWorker" in navigator) {{ window.addEventListener("load", function() {{ navigator.serviceWorker.register("/sw.js").catch(function(error) {{ console.log(error); }}); }}); }}</script>
     </body></html>"""
@@ -284,30 +220,14 @@ def home():
       </section>
 
       <section id="gallery" class="public-section">
-        <div class="section-heading">
-          <span class="section-kicker">GALLERY</span>
-          <h2>A Glimpse Into Nest Care Home</h2>
+        <div class="section-heading"><span class="section-kicker">GALLERY</span><h2>A Glimpse Into Nest Care Home</h2></div>
+        <p class="gallery-note">A glimpse of Nest Care Home.</p>
+        <div class="gallery-grid">
+          <div class="gallery-photo-card">
+            <img src="/static/gallery/ChatGPT Image Sep 24, 2026, 10_31_10 PM.png" alt="Nest Care Home">
+            <div><strong>Nest Care Home</strong><span>Care • Comfort • Dignity</span></div>
+          </div>
         </div>
-        <p class="gallery-note">Real moments from our home, our residents and the caring environment we create every day.</p>
-
-        <div class="gallery-showcase">
-          <a class="gallery-card gallery-main" href="/static/gallery/photo1.jpg" target="_blank" rel="noopener">
-            <img src="/static/gallery/photo1.jpg" alt="Resident life at Nest Care Home">
-            <div class="gallery-caption"><strong>Resident Life</strong><span>Warm, comfortable everyday moments</span></div>
-          </a>
-
-          <a class="gallery-card gallery-side" href="/static/gallery/photo2.jpg" target="_blank" rel="noopener">
-            <img src="/static/gallery/photo2.jpg" alt="Comfortable living at Nest Care Home">
-            <div class="gallery-caption"><strong>Comfortable Living</strong><span>A peaceful place to feel at home</span></div>
-          </a>
-
-          <a class="gallery-card gallery-side" href="/static/gallery/photo3.jpg" target="_blank" rel="noopener">
-            <img src="/static/gallery/photo3.jpg" alt="Moments of care at Nest Care Home">
-            <div class="gallery-caption"><strong>Moments of Care</strong><span>Compassion, connection and dignity</span></div>
-          </a>
-        </div>
-
-        <p class="gallery-more">More moments from Nest Care Home coming soon. ❤️</p>
       </section>
 
       <section class="public-section care-banner">
