@@ -1,6 +1,7 @@
 
 
 
+
 from flask import Flask, request, redirect, send_from_directory, session
 from functools import wraps
 import os
@@ -212,7 +213,7 @@ def home():
         </div>
         <div class="hero-visual">
           <div class="hero-image-card">
-            <img src="/static/gallery/ChatGPT%20Image%20Sep%2025,%2010_17_01%20PM.png" alt="Nest Care Home">
+            <img src="/static/gallery/ChatGPT%20Image%20Sep%2025,%202026,%2010_17_01%20PM.png" alt="Nest Care Home">
             <div class="hero-image-overlay"><strong>A Caring Community</strong><span>Safe • Comfortable • Supportive</span></div>
           </div>
           <div class="hero-floating-card"><span>✨</span><div><strong>Care • Comfort • Dignity</strong><small>Every resident matters</small></div></div>
