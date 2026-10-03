@@ -193,7 +193,7 @@ def home():
 
     return page("Nest Care Home", f"""
     <main class="public-home">
-      <section class="public-hero">
+      <section class="public-hero premium-hero">
         <div class="hero-content">
           <span class="eyebrow">NEST CARE HOME • VIJAYAWADA</span>
           <h1>A Place Where<br><span>Care Feels Like Home</span></h1>
