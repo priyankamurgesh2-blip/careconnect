@@ -196,15 +196,27 @@ def home():
       <section class="public-hero">
         <div class="hero-content">
           <span class="eyebrow">NEST CARE HOME • VIJAYAWADA</span>
-          <h1>A Caring Home.<br><span>A Loving Family.</span></h1>
-          <p class="hero-text">A warm and supportive place where residents can feel safe, respected and cared for every day.</p>
+          <h1>A Place Where<br><span>Care Feels Like Home</span></h1>
+          <p class="hero-lead">Nest Care Home is a warm and welcoming residential care home created to provide a safe, comfortable and supportive environment for residents.</p>
+          <p class="hero-description">We believe caring for someone is more than meeting everyday needs. It is about offering patience, respect, companionship and a sense of belonging. From personal care and nutritious meals to health support, medicine assistance and meaningful daily activities, our focus is on making every day comfortable and purposeful.</p>
+          <p class="hero-closing"><strong>Comfort meets compassion</strong> — creating a place where every resident can feel valued, respected and at home. ❤️</p>
           <div class="hero-buttons">
-            <a href="#contact"><button>📞 Contact Us</button></a>
-            <a href="#about"><button class="light-button">Learn More</button></a>
+            <a href="#contact"><button class="hero-primary">📞 Contact Us</button></a>
+            <a href="#about"><button class="hero-secondary">Explore Our Home →</button></a>
           </div>
-          <div class="hero-points"><span>❤️ Compassionate Care</span><span>🩺 Health Support</span><span>🏡 Comfortable Living</span></div>
+          <div class="hero-points">
+            <span><b>❤️</b><strong>Compassionate Care</strong><small>Kindness & personal attention</small></span>
+            <span><b>🩺</b><strong>Health & Wellbeing</strong><small>Organised everyday support</small></span>
+            <span><b>🏡</b><strong>Comfortable Living</strong><small>Peaceful home-like environment</small></span>
+          </div>
         </div>
-        <div class="hero-visual"><div class="hero-house">🏡</div><div class="hero-badge">Care • Comfort • Dignity</div></div>
+        <div class="hero-visual">
+          <div class="hero-image-card">
+            <img src="/static/gallery/ChatGPT%20Image%20Sep%2025,%2010_17_01%20PM.png" alt="Nest Care Home">
+            <div class="hero-image-overlay"><strong>A Caring Community</strong><span>Safe • Comfortable • Supportive</span></div>
+          </div>
+          <div class="hero-floating-card"><span>✨</span><div><strong>Care • Comfort • Dignity</strong><small>Every resident matters</small></div></div>
+        </div>
       </section>
 
       <section id="about" class="public-section intro-section">
