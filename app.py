@@ -263,38 +263,35 @@ def home():
         <div class="contact-main">
           <span class="section-kicker">CONTACT US</span>
           <h2>Visit Nest Care Home</h2>
-          <p class="contact-intro">We welcome enquiries from families and visitors. Please use the location details below to find Nest Care Home easily.</p>
+          <p>We are here to help you learn more about Nest Care Home, our care environment and everyday support.</p>
 
           <div class="contact-cards">
             <div class="contact-card">
-              <span class="contact-icon">📍</span>
-              <div>
-                <strong>Full Address</strong>
-                <p>Door No. 20-656,<br>Gowri Shankar Nagar (Murali Nagar Layout),<br>Opposite Sri Sai Durga Homes,<br>Sriramachandra Nagar, Kanuru,<br>Vijayawada, Andhra Pradesh — 520007</p>
-              </div>
+              <span>📍</span>
+              <strong>Full Address</strong>
+              <p>Door No. 20-656,<br>Gowri Shankar Nagar (Murali Nagar Layout),<br>Opposite Sri Sai Durga Homes,<br>Sriramachandra Nagar, Kanuru,<br>Vijayawada, Andhra Pradesh — 520007</p>
             </div>
             <div class="contact-card">
-              <span class="contact-icon">🧭</span>
-              <div>
-                <strong>Easy to Find</strong>
-                <p>Landmark: Opposite Sri Sai Durga Homes</p>
-                <p>Plus Code: <strong>GM6M+7P2</strong></p>
-              </div>
+              <span>🗺️</span>
+              <strong>Find Us Easily</strong>
+              <p>Use the location code <strong>GM6M+7P2</strong> to find Nest Care Home in Google Maps.</p>
+              <a class="contact-action" href="https://www.google.com/maps/search/?api=1&query=GM6M%2B7P2%2C%20Opposite%20Sri%20Sai%20Durga%20Homes%2C%20Gowri%20Shankar%20Nagar%2C%20Kanuru%2C%20Vijayawada%2C%20Andhra%20Pradesh%20520007" target="_blank" rel="noopener noreferrer">🧭 Get Directions →</a>
             </div>
-          </div>
-
-          <div class="contact-actions">
-            <a class="contact-action primary" href="https://www.google.com/maps/search/?api=1&query=GM6M%2B7P2%2C%20Opposite%20Sri%20Sai%20Durga%20Homes%2C%20Gowri%20Shankar%20Nagar%2C%20Kanuru%2C%20Vijayawada%2C%20Andhra%20Pradesh%20520007" target="_blank" rel="noopener">🗺️ Get Directions</a>
-            <a class="contact-action secondary" href="https://www.google.com/maps/search/?api=1&query=GM6M%2B7P2%2C%20Opposite%20Sri%20Sai%20Durga%20Homes%2C%20Gowri%20Shankar%20Nagar%2C%20Kanuru%2C%20Vijayawada%2C%20Andhra%20Pradesh%20520007" target="_blank" rel="noopener">📍 Open in Google Maps</a>
+            <div class="contact-card">
+              <span>📞</span>
+              <strong>Call Nest Care Home</strong>
+              <p>For enquiries, visits and current availability, call us directly.</p>
+              <a class="contact-action" href="tel:+91XXXXXXXXXX">📞 Call Now</a>
+              <small>Replace +91XXXXXXXXXX with the actual Nest Care Home number.</small>
+            </div>
           </div>
         </div>
 
-        <div class="map-card contact-location-card">
+        <div class="map-card">
           <div class="map-icon">📍</div>
-          <span class="section-kicker">NEST CARE HOME</span>
-          <h3>Gowri Shankar Nagar</h3>
-          <p>Door No. 20-656<br>Opposite Sri Sai Durga Homes<br>Kanuru, Vijayawada — 520007</p>
-          <div class="location-badge">🏡 Care • Comfort • Dignity</div>
+          <h3>Nest Care Home</h3>
+          <p>Door No. 20-656<br>Gowri Shankar Nagar<br>Kanuru, Vijayawada — 520007</p>
+          <a class="map-directions" href="https://www.google.com/maps/search/?api=1&query=GM6M%2B7P2%2C%20Opposite%20Sri%20Sai%20Durga%20Homes%2C%20Gowri%20Shankar%20Nagar%2C%20Kanuru%2C%20Vijayawada%2C%20Andhra%20Pradesh%20520007" target="_blank" rel="noopener noreferrer">Open in Google Maps ↗</a>
         </div>
       </section>
 
