@@ -2,7 +2,6 @@
 
 
 
-
 from flask import Flask, request, redirect, send_from_directory, session
 from functools import wraps
 import os
@@ -281,8 +280,9 @@ def home():
               <span>📞</span>
               <strong>Call Nest Care Home</strong>
               <p>For enquiries, visits and current availability, call us directly.</p>
-              <a class="contact-action" href="tel:+91XXXXXXXXXX">📞 Call Now</a>
-              <small>Replace +91XXXXXXXXXX with the actual Nest Care Home number.</small>
+              <a class="contact-action" href="tel:+919848340496">📞 Call Now</a>
+            <a class="contact-action" href="tel:+917386620496">📞 Alternate Number</a>
+              <small>Primary: 9848340496 • Alternate: 7386620496</small>
             </div>
           </div>
         </div>
@@ -771,3 +771,4 @@ create_database()
 
 if __name__ == "__main__":
     app.run(debug=True)
+
