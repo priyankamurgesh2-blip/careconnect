@@ -2,6 +2,7 @@
 
 
 
+
 from flask import Flask, request, redirect, send_from_directory, session
 from functools import wraps
 import os
@@ -274,7 +275,7 @@ def home():
               <span>🗺️</span>
               <strong>Find Us Easily</strong>
               <p>Use the location code <strong>GM6M+7P2</strong> to find Nest Care Home in Google Maps.</p>
-              <a class="contact-action" href="https://www.google.com/maps/search/?api=1&query=GM6M%2B7P2%2C%20Opposite%20Sri%20Sai%20Durga%20Homes%2C%20Gowri%20Shankar%20Nagar%2C%20Kanuru%2C%20Vijayawada%2C%20Andhra%20Pradesh%20520007" target="_blank" rel="noopener noreferrer">🧭 Get Directions →</a>
+              <a class="contact-action" href="https://www.google.com/maps/dir/?api=1&destination=16.5106098%2C80.6843471" target="_blank" rel="noopener noreferrer">🧭 Get Directions →</a>
             </div>
             <div class="contact-card">
               <span>📞</span>
@@ -291,7 +292,19 @@ def home():
           <div class="map-icon">📍</div>
           <h3>Nest Care Home</h3>
           <p>Door No. 20-656<br>Gowri Shankar Nagar<br>Kanuru, Vijayawada — 520007</p>
-          <a class="map-directions" href="https://www.google.com/maps/search/?api=1&query=GM6M%2B7P2%2C%20Opposite%20Sri%20Sai%20Durga%20Homes%2C%20Gowri%20Shankar%20Nagar%2C%20Kanuru%2C%20Vijayawada%2C%20Andhra%20Pradesh%20520007" target="_blank" rel="noopener noreferrer">Open in Google Maps ↗</a>
+          <div class="map-embed-wrap">
+            <iframe
+              src="https://www.google.com/maps?q=16.5106098,80.6843471&z=18&output=embed"
+              title="Nest Care Home location on Google Maps"
+              width="100%"
+              height="320"
+              style="border:0; border-radius:14px;"
+              loading="lazy"
+              referrerpolicy="no-referrer-when-downgrade"
+              allowfullscreen>
+            </iframe>
+          </div>
+          <a class="map-directions" href="https://www.google.com/maps/dir/?api=1&destination=16.5106098%2C80.6843471" target="_blank" rel="noopener noreferrer">🧭 Get Directions to Nest Care Home ↗</a>
         </div>
       </section>
 
@@ -771,4 +784,3 @@ create_database()
 
 if __name__ == "__main__":
     app.run(debug=True)
-
